@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordMaster - Master the Art of Words</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Caveat:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/home.css">
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+   <div class="header-content">
+    <div class="logo handwritten" id="logoBtn">
+     WordMaster
+    </div>
+    <div class="header-controls">
+     <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+     <button class="icon-btn" id="langToggle" aria-label="Toggle language">EN</button>
+     <button class="btn" id="statsNavBtn">Stats</button>
+     <button class="btn btn-primary" id="playNavBtn">Play</button>
+    </div>
+   </div>
+  </header>
+
+<!--Home page -->
+  <div id="homePage" class="page active">
+   <section class="hero">
+    <div class="hero-content">
+     <h1 class="hero-title handwritten">Welcome to WordMaster</h1>
+     <p class="hero-subtitle handwritten">Master the Art of Words</p>
+     <p class="hero-description">Challenge yourself with daily word puzzles. Guess the hidden word using clever clues and strategic thinking.</p>
+    <div class="hero-buttons">
+     <button class="btn btn-primary" id="playBtn"> Play Now</button>
+     <button class="btn" id="signInBtn"> Sign In</button>
+     <button class="btn" id="guideNavBtn"> How to Play</button>
+     </div>
+    </div>
+   </section>
+   <section class="features">
+    <div class="features-grid">
+     <div class="feature-card">
+      <div class="feature-icon">
+       🎯
+      </div>
+      <h3 class="feature-title handwritten">Daily Challenges</h3>
+      <p class="feature-description">New word puzzles every day to keep your mind sharp and engaged.</p>
+     </div>
+     <div class="feature-card">
+      <div class="feature-icon">
+       📊
+      </div>
+      <h3 class="feature-title handwritten">Track Progress</h3>
+      <p class="feature-description">Monitor your performance with detailed statistics and streak counters.</p>
+     </div>
+     <div class="feature-card">
+      <div class="feature-icon">
+       🌙
+      </div>
+      <h3 class="feature-title handwritten">Dark Mode</h3>
+      <p class="feature-description">Beautiful dark theme designed for comfortable extended play sessions.</p>
+     </div>
+     <div class="feature-card">
+      <div class="feature-icon">
+       🌍
+      </div>
+      <h3 class="feature-title handwritten">Multi-Language</h3>
+      <p class="feature-description">Play in English or Persian with seamless language switching.</p>
+     </div>
+     <div class="feature-card">
+      <div class="feature-icon">
+       ⚡
+      </div>
+      <h3 class="feature-title handwritten">Instant Feedback</h3>
+      <p class="feature-description">Real-time color-coded hints guide you to the correct answer.</p>
+     </div>
+     <div class="feature-card">
+      <div class="feature-icon">
+       📱
+      </div>
+      <h3 class="feature-title handwritten">Fully Responsive</h3>
+      <p class="feature-description">Optimized experience on desktop, tablet, and mobile devices.</p>
+     </div>
+    </div>
+   </section>
+  </div>
+
+  <!-- Login Page -->
+  <div id="loginPage" class="page">
+   <div class="auth-container">
+    <div class="auth-card">
+     <h2 class="auth-title handwritten">Welcome Back</h2>
+     <form id="loginForm">
+      <div class="form-group">
+        <label class="form-label" for="loginEmail">Email</label><input type="email" id="loginEmail" class="form-input" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="loginPassword">Password</label><input type="password" id="loginPassword" class="form-input" placeholder="Enter your password" required> <a href="#" class="forgot-link">Forgot Password?</a>
+      </div>
+      <button type="submit" class="btn btn-primary auth-submit">Sign In</button>
+     </form>
+     <p class="auth-footer">Don't have an account? <a href="#" id="toSignupLink">Sign Up</a></p>
+    </div>
+   </div>
+  </div>
+
+  <!-- Signup Page -->
+  <div id="signupPage" class="page">
+   <div class="auth-container">
+    <div class="auth-card">
+     <h2 class="auth-title handwritten">Create Account</h2>
+     <form id="signupForm">
+      <div class="form-group">
+        <label class="form-label" for="signupName">Name</label><input type="text" id="signupName" class="form-input" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="signupUsername">Username</label> <input type="text" id="signupUsername" class="form-input" placeholder="Choose a username">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="signupEmail">Email</label> <input type="email" id="signupEmail" class="form-input" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="signupPassword">Password</label> <input type="password" id="signupPassword" class="form-input" placeholder="Create a password" required>
+      </div>
+      <button type="submit" class="btn btn-primary auth-submit">Create Account</button>
+     </form>
+     <p class="auth-footer">Already have an account? <a href="#" id="toLoginLink">Sign In</a></p>
+    </div>
+   </div>
+  </div>
+
+  <!-- Game Page -->
+  <div id="gamePage" class="page">
+   <div class="game-container">
+    <div class="clue-section">
+     <div class="clue-label">
+      Clue
+     </div>
+     <p class="clue-text" id="clueText">A place where books are kept and read</p>
+    </div>
+    <div class="word-grid" id="wordGrid"></div>
+    <div class="keyboard" id="keyboard"></div>
+   </div>
+  </div>
+
+  <!-- Stats Page -->
+  <div id="statsPage" class="page">
+   <div class="stats-container">
+    <div class="stats-card">
+     <div class="stats-header">
+      <div class="stats-status" id="statsEmoji">
+       🎉
+      </div>
+      <h2 class="stats-title handwritten" id="statsTitle">Congratulations!</h2>
+      <p class="stats-word">The word was: <span id="correctWordDisplay">SHELF</span></p>
+     </div>
+     <div class="stats-grid">
+      <div class="stat-item">
+       <div class="stat-value" id="attemptsValue">
+        3
+       </div>
+       <div class="stat-label">
+        Attempts
+       </div>
+      </div>
+      <div class="stat-item">
+       <div class="stat-value" id="accuracyValue">
+        85%
+       </div>
+       <div class="stat-label">
+        Accuracy
+       </div>
+      </div>
+      <div class="stat-item">
+       <div class="stat-value" id="streakValue">
+        12
+       </div>
+       <div class="stat-label">
+        Win Streak
+       </div>
+      </div>
+      <div class="stat-item">
+       <div class="stat-value" id="totalWinsValue">
+        47
+       </div>
+       <div class="stat-label">
+        Total Wins
+       </div>
+      </div>
+     </div>
+     <div>
+      <div class="stat-label" style="margin-bottom: 8px;">
+       Performance Progress
+      </div>
+      <div class="progress-bar">
+       <div class="progress-fill" id="progressFill" style="width: 85%;"></div>
+      </div>
+     </div>
+    </div>
+    <button class="btn btn-primary" style="width: 100%; padding: 16px;" id="playAgainBtn">Play Again</button>
+   </div>
+  </div>
+
+  <!-- Guide Page -->
+  <div id="guidePage" class="page">
+   <div class="guide-container">
+    <div class="guide-section">
+     <h2 class="guide-title handwritten">How to Play WordMaster</h2>
+     <p class="guide-text">WordMaster is a word-guessing game where you need to figure out the hidden word using the clue provided. You have multiple attempts to guess the correct word, and after each guess, you'll receive color-coded feedback to help you narrow down the answer.</p>
+     <p class="guide-text">Read the clue carefully and start guessing! Use the on-screen keyboard to enter your letters. The game will guide you with instant feedback after each attempt.</p>
+    </div>
+    <div class="guide-section">
+     <h3 class="guide-title handwritten">Color Feedback System</h3>
+     <div class="example-row">
+      <div class="example-box correct" style="background: var(--correct); color: white; border-color: var(--correct);">
+       S
+      </div>
+      <div class="example-explanation">
+        <strong style="color: var(--correct);">Green:</strong> The letter is correct and in the right position.
+      </div>
+     </div>
+     <div class="example-row">
+      <div class="example-box present" style="background: var(--present); color: white; border-color: var(--present);">
+       H
+      </div>
+      <div class="example-explanation">
+        <strong style="color: var(--present);">Yellow:</strong> The letter is in the word but in the wrong position.
+      </div>
+     </div>
+     <div class="example-row">
+      <div class="example-box absent" style="background: var(--absent); color: white; border-color: var(--absent);">
+       K
+      </div>
+      <div class="example-explanation">
+        <strong style="color: var(--absent);">Gray:</strong> The letter is not in the word at all.
+      </div>
+     </div>
+    </div>
+    <div class="guide-section">
+     <h3 class="guide-title handwritten">Tips for Success</h3>
+     <p class="guide-text">• Start with common vowels and consonants<br>
+       • Pay attention to the clue - it's your biggest hint<br>
+       • Use the color feedback to eliminate possibilities<br>
+       • Think about word patterns and common letter combinations<br>
+       • Don't rush - take your time to think strategically</p>
+    </div>
+    <button class="btn btn-primary" style="width: 100%; padding: 16px;" id="startPlayingBtn">Start Playing</button>
+   </div>
+  </div>
+  
+  <!-- Modal -->
+  <div id="modal" class="modal">
+   <div class="modal-content">
+    <h3 class="modal-title handwritten" id="modalTitle">Success!</h3>
+    <p class="modal-message" id="modalMessage">You've successfully signed in!</p><button class="btn btn-primary" id="modalCloseBtn">Continue</button>
+   </div>
+  </div>
+  <script src="../DATA/game.js"></script>
+</body>
+</html>

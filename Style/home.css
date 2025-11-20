@@ -151,7 +151,7 @@ header {
  /* Homepage */
 .hero {
   text-align: center;
-  padding: 80px 24px;
+  padding: 80px 30px;
   position: relative;
   overflow: hidden;
     }
@@ -220,7 +220,7 @@ header {
 
 .features-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
    gap: 24px;
    max-width: 1200px;
    margin: 0 auto;

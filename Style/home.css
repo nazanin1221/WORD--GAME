@@ -1,6 +1,6 @@
 body {
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Vazirmatn','Inter', sans-serif;
       background: var(--bg-dark);
       color: var(--text-primary);
       line-height: 1.6;
@@ -32,10 +32,10 @@ body {
 .light-mode {
    --bg-dark: #f8fafc;
    --bg-card: #ffffff;
-   --bg-glass: rgba(255, 255, 255, 0.8);
+   --bg-glass: rgba(255, 255, 255, 0.25);
    --text-primary: #1a2332;
    --text-secondary: #64748b;
-   --border-color: rgba(0, 0, 0, 0.1);
+   --border-color: rgba(0, 0, 0, 0.20);
    }
 
 html, body {
@@ -44,8 +44,13 @@ html, body {
    padding: 0;
    }
 
+body[lang="fa"], .page.fa {
+    direction: rtl;
+    text-align: right;
+     }
+
 .handwritten {
-   font-family: 'Caveat', cursive; 
+   font-family: 'Vazirmatn', 'Caveat', cursive; 
    }
 
 .container {
